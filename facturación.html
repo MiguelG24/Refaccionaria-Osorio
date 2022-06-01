@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Facturación</title>
+</head>
+
+<body>
+    <div class="d-flex" id="content-wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <img src="img/logotipo.jpeg" width="140" height="100" alt="">
+            </div>
+            <div class="menu">
+                <a href="perfil.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-person lead me-1"></i>
+                    Perfil</a>
+
+                <a href="facturación.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-paper lead me-1"></i>
+                    Facturación</a>
+
+                <a href="ventas.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-cart lead me-1"></i>
+                    Ventas</a>
+
+                <a href="inventario.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-filing lead me-1"></i>
+                    Inventario</a>
+
+                <a href="proveedores.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Proveedores</a>
+
+                <a href="usuarios.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Usuarios</a>
+
+                <a href="configuración.html" class="d-block text-light p-3 border-0 link"> <i
+                        class="icon ion-md-settings lead me-1"></i>
+                    Configuración</a>
+            </div>
+        </div>
+        <!-- Fin sidebar -->
+
+        <div class="w-100">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid align-items-center">
+                    <i class="icon ion-md-paper display-4 me-2"></i>
+                    <a class="navbar-brand h1 fw-bold fs-3" href="#">Facturación</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon lead mr-2"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item position-relative me-4">
+                                <i
+                                    class="icon ion-md-notifications lead mr-2 position-absolute top-50 start-50 translate-middle"></i>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/user-1.png" class="img-fluid rounded-circle avatar mr-2" alt="" />
+                                    Diego Velázquez
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="inicioSesion.html">
+                                            <i class="icon ion-md-log "></i>Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content" class="w-100">
+
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Registrar
+                            Factura</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Consultar
+                            Factura</button>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <section>
+                            <form data-bs-spy="scroll" class="row g-3 d-block" action="" id="formRF">
+                                <div class="col-md-12 ">
+                                    <label for="" class="form-label mt-3 ms-3 h3 fw-bold">Ingresar los datos de la
+                                        factura</label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Folio</span>
+                                        <input type="text" id="folioR" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">RFC del Proveedor</span>
+                                        <input type="text" id="rfc" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Razón
+                                            Social</span>
+                                        <input type="text" id="razonS" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 me-4 d-inline-block">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Fecha
+                                            Emitida</span>
+                                        <input type="date" id="fechaE" class="form-control" name="birthday" value=""
+                                            aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-inline-block">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Fecha
+                                            Recibida</span>
+                                        <input type="date" id="fechaR" class="form-control" name="birthday" value=""
+                                            aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Días
+                                            restantes</span>
+                                        <input type="number" id="diasRest" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-inline-block">
+                                    <label for="exampleFormControlInput1" class="form-label d-block ms-4">Agregar articulo Comprado</label>
+                                    <div class="input-group mb-3 mt-0 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Clave de Producto</span>
+                                        <input type="search" id="claveProducto" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 d-inline-block">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text"
+                                            id="inputGroup-sizing-default">Cantidad</span>
+                                        <input type="number" id="cantidad" name="numero" size="10px" value="1" min="1"
+                                            max="500" step="1" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 mb-3 d-inline-block etiquetas">
+                                    <button id="btnAgregar" class="btn btn-primary" type="button">Agregar</button>
+                                </div>
+
+                                <div id="datosArticulo" class="col-md-6 d-inline-block">
+                                    
+                                </div>
+
+                                <div class="col-md-12 mb-3 me-4 etiquetas">
+                                    <table class="table table-striped table-hover" id="detallesFactura">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Clave de Producto</th>
+                                                <th scope="col">Clave SAT</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Unidad</th>
+                                                <th scope="col">Categoria</th>
+                                                <th scope="col">Precio</th>
+                                                <th scope="col">Cantidad</th>
+                                                <th scope="col">Total</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bodyDetallesF">
+                                            <tr>
+                                                <th id="claveProducto" scope="row"></th>
+                                                <td id="claveSat"></td>
+                                                <td id="nombre"></td>
+                                                <td id="unidad"></td>
+                                                <td id="categoria"></td>
+                                                <td id="precio"></td>
+                                                <td id="cantidad"></td>
+                                                <td id="total"></td>
+                                                <td><button id="modificar" class="btn btn-warning btn-sm"
+                                                        type="button">Modificar</button>
+                                                </td>
+                                                <td><button id="eliminar" class="btn btn-danger btn-sm"
+                                                        type="button">Eliminar</button></td>
+                                            </tr>                                           
+                                        </tbody>
+                                        <tfoot id="footDetallesF">
+                                            <tr>
+                                                <th scope="row" colspan="8" class="table-active">Sub Total:</th>
+                                                <td id="subTotal">$235.99</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="8">Impuesto IVA 16%:</th>
+                                                <td id="impuestoIVA">$37.75</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="8" class="table-active">Total:</th>
+                                                <td id="total">$273.74</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-12 mb-3 etiquetas">
+                                    <button id="btnRegistrar" class="btn btn-success" type="button">Registrar Factura</button>
+                                    <button id="btnCancelar" class="btn btn-danger ms-3" type="submit">Cancelar</button>
+                                </div>
+
+                            </form>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <section>
+                            <form data-bs-spy="scroll" id="formBF" class="row g-3 d-block" action="">
+                                <div class="col-md-12 ">
+                                    <label for="" class="form-label mt-3 ms-3 h3 fw-bold">Buscar factura por número de
+                                        Folio</label>
+                                </div>
+
+                                <div class="col-md-4 d-inline-block">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Folio</span>
+                                        <input type="search" id="folioB" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3 d-inline-block etiquetas">
+                                    <button id="buscarFolio" class="btn btn-primary" type="button">Buscar</button>
+                                </div>
+
+                                <div class="col-md-12 mb-3 etiquetas">
+                                    <table class="table" id="datosGeneralesF">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Folio</th>
+                                                <th scope="col">RFC</th>
+                                                <th scope="col">Fecha emitida</th>
+                                                <th scope="col">Fecha recibida</th>
+                                                <th scope="col">Precio con IVA</th>
+                                                <th scope="col">Días restantes</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">5618556</th>
+                                                <td>GRDC210224TF8</td>
+                                                <td>17/03/2021</td>
+                                                <td>23/03/2021</td>
+                                                <td>$1,564.95</td>
+                                                <td><button id="descargar" class="btn btn-primary" type="button">Descargar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous">
+    </script>
+    <!--JQuery-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="Ajax/a_factura.js"></script>
+
+</body>
+
+</html>

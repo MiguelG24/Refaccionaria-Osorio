@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <script>
+        $(function () {
+            $('input[name="birthday"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+            });
+        });
+    </script>
+
+    <title>Página Principal</title>
+</head>
+
+<body>
+    <div class="d-flex id=" content-wrapper"">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <img src="img/logotipo.jpeg" width="140" height="100" alt="">
+            </div>
+            <div class="menu">
+                <a href="perfil.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-person lead me-1"></i>
+                    Perfil</a>
+
+                <a href="facturación.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-paper lead me-1"></i>
+                    Facturación</a>
+
+                <a href="ventas.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-cart lead me-1"></i>
+                    Ventas</a>
+
+                <a href="inventario.php" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-filing lead me-1"></i>
+                    Inventario</a>
+
+                <a href="proveedores.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Proveedores</a>
+
+                <a href="usuarios.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Usuarios</a>
+
+                <a href="configuración.html" class="d-block text-light p-3 border-0 link"> <i
+                        class="icon ion-md-settings lead me-1"></i>
+                    Configuración</a>
+            </div>
+        </div>
+        <!-- Fin sidebar -->
+
+        <div class="w-100">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid align-items-center">
+                    <i class="icon ion-md-cart display-4 me-2"></i>
+                    <a class="navbar-brand h1 fw-bold fs-3" href="#">Ventas</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon lead mr-2"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item position-relative me-4">
+                                <i
+                                    class="icon ion-md-notifications lead mr-2 position-absolute top-50 start-50 translate-middle"></i>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/user-1.png" class="img-fluid rounded-circle avatar mr-2" alt="" />
+                                    Diego Velázquez
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="inicioSesion.html">Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content" class="w-100">
+
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Registrar
+                            Venta</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Consultar
+                            Ventas</button>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form>
+                            <form data-bs-spy="scroll" class="row g-3 d-block" action="">
+                                <div class="col-md-12 ">
+                                    <label for="" class="form-label mt-3 ms-3 h3 fw-bold">Ingresar los datos de la
+                                        venta</label>
+                                </div>
+
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-6 d-inline-block">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="input-group mb-3 etiquetas">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Fecha</span>
+                                                        <input type="text" class="form-control" name="birthday" value=""
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 d-inline-block">
+                                                    <div class="input-group mb-3 etiquetas">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Folio</span>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default"
+                                                            placeholder="153624" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8 d-inline-block">
+                                                    <div class="input-group mb-3 etiquetas">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Clave
+                                                            del
+                                                            Producto</span>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row ">
+                                                <div class="col-md-5 d-inline-block">
+                                                    <div class="input-group mb-3 etiquetas">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Cantidad</span>
+                                                        <input type="number" name="numero" size="10px" value="1" min="1"
+                                                            max="50" step="1" aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 mb-3 d-inline-block">
+                                                    <button class="btn btn-primary  ms-3 mt-4 float-start"
+                                                        type="button">Agregar
+                                                        Producto</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 d-inline-block">
+                                            <div class="card mb-3 mt-4" style="max-width: 450px;">
+                                                <div class="row g-0 w-100">
+                                                    <div class="col-md-5">
+                                                        <div class="card-header text-end fw-bold">
+                                                            Clave de Producto:
+                                                        </div>
+                                                        <div class="card-header text-end fw-bold">
+                                                            Nombre:
+                                                        </div>
+                                                        <div class="card-header text-end fw-bold">
+                                                            Precio:
+                                                        </div>
+                                                        <div class="card-header text-end fw-bold">
+                                                            Stock:
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">12323</li>
+                                                            <li class="list-group-item">Balatas</li>
+                                                            <li class="list-group-item">$235.99</li>
+                                                            <li class="list-group-item">124</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <div class="col-md-12 mb-3 etiquetas">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Clave del Producto</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Cantidad</th>
+                                                <th scope="col">Precio</th>
+                                                <th scope="col">Total</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>12323</td>
+                                                <td>Balatas</td>
+                                                <td>1</td>
+                                                <td>$235.99</td>
+                                                <td>$235.99</td>
+                                                <td><button class="btn btn-warning btn-sm"
+                                                        type="button">Modificar</button>
+                                                </td>
+                                                <td><button class="btn btn-danger btn-sm"
+                                                        type="button">Eliminar</button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="5" class="table-active">Sub Total:</th>
+                                                <td>$235.99</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="5">Impuesto IVA 16%:</th>
+                                                <td>$37.75</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="5" class="table-active">Total:</th>
+                                                <td>$273.74</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-12 mb-3 etiquetas ">
+                                    <button class="btn btn-success" type="submit">Confirmar venta</button>
+                                    <button class="btn btn-danger ms-3" type="submit">Cancelar</button>
+                                </div>
+
+                            </form>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                        <form class="row g-3 d-block" action="">
+                            <div class="col-md-12 ">
+                                <label for="" class="form-label mt-3 ms-3 h3 fw-bold">Consultar ventas</label>
+                            </div>
+
+                            <div class="col-md-3 d-inline-block">
+                                <label for="exampleFormControlInput1" class="form-label d-block ms-4">Buscar por Fecha</label>
+                                <div class="input-group mb-3 mt-0 etiquetas">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Fecha Inicio</span>
+                                    <input type="text" class="form-control" name="birthday" value=""
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                </div>                               
+                            </div>
+                            <div class="col-md-3 mb-3 d-inline-block etiquetas">
+                                <div class="input-group mb-3 mt-0 etiquetas">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Fecha Final</span>
+                                    <input type="text" class="form-control" name="birthday" value=""
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3 d-inline-block etiquetas">
+                                <button class="btn btn-primary" type="button">Buscar</button>
+                            </div>
+
+                            <div class="col-md-4 d-inline-block">
+                                <label for="exampleFormControlInput1" class="form-label d-block ms-4">Buscar por Folio</label>
+                                <div class="input-group mb-3 mt-0 etiquetas">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Folio</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                        aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3 d-inline-block etiquetas">
+                                <button class="btn btn-primary" type="button">Buscar</button>
+                            </div>
+
+                            <div class="col-md-12 mb-3 etiquetas">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Folio</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Sub Total</th>
+                                            <th scope="col">Impuesto</th>
+                                            <th scope="col">Total</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">5618556</th>
+                                            <td>17/03/2021</td>
+                                            <td>$1314.63</td>
+                                            <td>$250.32</td>
+                                            <td>$1,564.95</td>
+                                            <td><button class="btn btn-success" type="button">Descargar</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

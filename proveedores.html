@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Página Principal</title>
+</head>
+
+<body>
+    <div class="d-flex" id="content-wrapper"">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <img src="img/logotipo.jpeg" width="140" height="100" alt="">
+            </div>
+            <div class="menu">
+                <a href="perfil.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-person lead me-1"></i>
+                    Perfil</a>
+
+                <a href="facturación.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-paper lead me-1"></i>
+                    Facturación</a>
+
+                <a href="ventas.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-cart lead me-1"></i>
+                    Ventas</a>
+
+                <a href="inventario.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-filing lead me-1"></i>
+                    Inventario</a>
+
+                <a href="proveedores.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Proveedores</a>
+
+                <a href="usuarios.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Usuarios</a>
+
+                <a href="configuración.html" class="d-block text-light p-3 border-0 link"> <i
+                        class="icon ion-md-settings lead me-1"></i>
+                    Configuración</a>
+            </div>
+        </div>
+        <!-- Fin sidebar -->
+
+        <div class="w-100">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid align-items-center">
+                    <i class="icon ion-md-people display-4 me-2"></i>
+                    <a class="navbar-brand h1 fw-bold fs-3" href="#">Proveedores</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon lead mr-2"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item position-relative me-4">
+                                <i
+                                    class="icon ion-md-notifications lead mr-2 position-absolute top-50 start-50 translate-middle"></i>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/user-1.png" class="img-fluid rounded-circle avatar mr-2" alt="" />
+                                    Diego Velázquez
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="inicioSesion.html">Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content" class="w-100">
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Registrar
+                            Proveedor</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Consultar
+                            Proveedor</button>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <section>
+                            <form data-bs-spy="scroll" class="row g-3 d-block" action="">
+                                <div class="col-md-12 ">
+                                    <label for="" class="form-label mt-3 ms-3 h3 fw-bold">Ingresar los datos del
+                                        proveedor</label>
+                                </div>
+
+                                <div class="col-md-3 d-inline-block">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">RFC</span>
+                                        <input type="text" id="rfc" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-inline-block">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Razón
+                                            Social</span>
+                                        <input type="text" id="razonSocial" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Limite de
+                                            Crédito</span>
+                                        <span class="input-group-text">$</span>
+                                        <input type="text" id="limiteCredito" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Referencia de
+                                            Pago</span>
+                                        <input type="text" id="refernciaPago" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Número de cuenta</span>
+                                        <input type="text" id="numeroCuenta" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Clabe Interbancaria</span>
+                                        <input type="text" id="clabeInter" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>                            
+
+                                <div class="col-md-4">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+                                        <input type="text" id="telefono" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="input-group mb-3 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+                                        <input type="text" id="direccion" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-12 mb-3 etiquetas">
+                                    <button id="btnRegistrarProveedor" class="btn btn-success" type="button">Registrar Proveedor</button>
+                                    <button id="cancelar" class="btn btn-danger ms-3" type="submit">Cancelar</button>
+                                </div>
+
+                            </form>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <section>
+                            <form data-bs-spy="scroll" class="row g-3 d-block" action="">
+                                <div class="col-md-12 ">
+                                    <label for="" class="form-label mt-3 ms-3 h3 fw-bold">Buscar proveedor</label>
+                                </div>
+
+                                <div class="col-md-4 mt-4 d-inline-block">
+                                    <label for="exampleFormControlInput1" class="form-label d-block ms-4">Buscar por RFC</label>
+                                    <div class="input-group mb-3 mt-0 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">RFC</span>
+                                        <input id="buscarPorRFC" type="text" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3 d-inline-block etiquetas">
+                                    <button id="btnBuscarPorRFC" class="btn btn-primary" type="button">Buscar</button>
+                                </div>
+
+                                <div class="col-md-4 mt-4 d-inline-block">
+                                    <label for="exampleFormControlInput1" class="form-label d-block ms-4">Buscar por Razón Social</label>
+                                    <div class="input-group mb-3 mt-0 etiquetas">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Razón Social</span>
+                                        <input id="buscarPorRazonS" type="text" class="form-control" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3 d-inline-block etiquetas">
+                                    <button id="btnBuscarPorRazonS" class="btn btn-primary" type="button">Buscar</button>
+                                </div>
+
+                                <div class="col-md-12 mb-3 ms-0 etiquetas">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">RFC</th>
+                                                <th scope="col">Razón Social</th>
+                                                <th scope="col">Limite de Crédito</th>
+                                                <th scope="col">Referencia de Pago</th>
+                                                <th scope="col">Número de cuenta</th>
+                                                <th scope="col">Clabe Interbancaria</th>
+                                                <th scope="col">Teléfono</th>
+                                                <th scope="col">Dirección</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbdoyProveedores">
+                                            <tr>                                            
+                                                <td>GRDC210224TF8</td>
+                                                <td>Grupo Gonher</td>
+                                                <td>$15000</td>
+                                                <td>12345253</td>
+                                                <td>15623895576431</td>
+                                                <td>684759153624963573</td>
+                                                <td>2734561532</td>
+                                                <td>Huatusco, Ver.</td>
+                                                <td><button id="modificar" class="btn btn-warning btn-sm" type="button">Modificar</button></td>
+                                                <td><button id="eliminar" class="btn btn-danger btn-sm" type="button">Eliminar</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous">
+    </script>
+    <!--JQuery-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="Ajax/a_proveedores.js"></script>
+
+
+</body>
+
+</html>

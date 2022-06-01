@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Página Principal</title>
+</head>
+
+<body>
+    <div class="d-flex id=" content-wrapper"">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <img src="img/logotipo.jpeg" width="140" height="100" alt="">
+            </div>
+            <div class="menu">
+                <a href="perfil.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-person lead me-1"></i>
+                    Perfil</a>
+
+                <a href="facturación.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-paper lead me-1"></i>
+                    Facturación</a>
+
+                <a href="ventas.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-cart lead me-1"></i>
+                    Ventas</a>
+
+                <a href="inventario.php" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-filing lead me-1"></i>
+                    Inventario</a>
+
+                <a href="proveedores.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Proveedores</a>
+
+                <a href="usuarios.html" class="d-block text-light p-3 border-0 link"><i
+                        class="icon ion-md-people lead me-1"></i>
+                    Usuarios</a>
+
+                <a href="configuración.html" class="d-block text-light p-3 border-0 link"> <i
+                        class="icon ion-md-settings lead me-1"></i>
+                    Configuración</a>
+            </div>
+        </div>
+        <!-- Fin sidebar -->
+
+        <div class="w-100">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid align-items-center">
+                    <i class="icon ion-md-person display-4 me-2"></i>
+                    <a class="navbar-brand h1 fw-bold fs-3" href="#">Perfil</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon lead mr-2"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item position-relative me-4">
+                                <i
+                                    class="icon ion-md-notifications lead mr-2 position-absolute top-50 start-50 translate-middle"></i>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/user-1.png" class="img-fluid rounded-circle avatar mr-2" alt="" />
+                                    Diego Velázquez
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="inicioSesion.html">Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
