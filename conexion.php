@@ -1,8 +1,8 @@
 <?php
-    $host = 'localhost:3307';
-	$user = 'admin';
-	$password = '330600';
-	$db = 'refaccionariao';
+    $host = 'localhost:port';
+	$user = 'user';
+	$password = 'password';
+	$db = 'database';
 
 	$conection = new mysqli( $host, $user, $password, $db);
 	$conection->query("SET NAMES 'utf8'");
